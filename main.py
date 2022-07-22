@@ -9,6 +9,6 @@ rows = fi.readlines()
 for row in rows:
     for keyword in keywords:
         if 'Note' not in row[:-1] and 'PS' not in row[:2]:
-            if keyword in row:
+            if keyword[:-1] in row:
                 print(row[:-1])
                 break
